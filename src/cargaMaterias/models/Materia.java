@@ -1,26 +1,22 @@
 package cargaMaterias.models;
-
-import java.util.Scanner;
-
 public class Materia {
-    public String materia;
-    public char grupo;
+    private String nombreMateria;
+    private String grupo;
 
-    Scanner entrada = new Scanner(System.in);
-
-    public String getMateria() {
-        return materia;
-    }
-
-    public void setMateria(String materia) {
-        this.materia = materia;
-    }
-
-    public char getGrupo() {
-        return grupo;
-    }
-
-    public void setGrupo(char grupo) {
+    public Materia(String nombreMateria, String grupo) {
+        this.nombreMateria = nombreMateria;
         this.grupo = grupo;
+    }
+    public Materia(){
+        this.nombreMateria =  "sin materia";;
+        this.grupo = "sin grupo";
+    }
+
+    public String getNombreMateria() {
+        return nombreMateria;
+    }
+
+    public String getGrupo() {
+        return grupo;
     }
 }
